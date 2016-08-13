@@ -66,7 +66,7 @@ public class Frameswork {
 		
 		*/
 	}
-	public static int findframenumber(WebDriver driver,By by){		// reusable method
+/*	public static int findframenumber(WebDriver driver,By by){		// reusable method
 		int fnum=driver.findElements(By.tagName("iframe")).size();
 		int i;
 		for(i=0;i<fnum;i++){
@@ -79,6 +79,6 @@ public class Frameswork {
 			driver.switchTo().defaultContent();
 		}
 		return -1;
-	}
+	}*/
 
 }
