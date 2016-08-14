@@ -28,13 +28,13 @@ public class Desiredcap {
 //		cap.setCapability("deviceName", "Android Emulator");
 //		cap.setCapability("app", apppath.getAbsolutePath());
 
-		AndroidDriver driver=new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+/*		AndroidDriver driver=new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),cap);
 		Thread.sleep(5000L);
 		driver.findElementById("com.bt.bms:id/btnNoThanks").click();
 		driver.findElementById("com.bt.bms:id/dismiss").click();
-	//	driver.f
+
 		
-		
+		*/
 	}
 
 }

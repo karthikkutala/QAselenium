@@ -1,8 +1,12 @@
 package TestNGfiles;
 
+import java.io.IOException;
+
 import org.testng.annotations.*;
 
-public class Annotations {
+public class Annotations extends Datadrivenframe {
+	
+	
 	
 	@BeforeMethod
 	public void userid(){
@@ -13,7 +17,8 @@ public class Annotations {
 		System.out.println("executes once before all tests");
 	}
 	@Test(groups={"priority1"})
-	public void openingbrowser(){
+	public void openingbrowser() throws IOException, InterruptedException{
+		Login();
 		System.out.println("opening broswer");
 	}
 	@Test(groups={"priority2"})
