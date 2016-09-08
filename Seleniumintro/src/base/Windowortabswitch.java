@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Windowortabswitch {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver=new FirefoxDriver();
 		driver.get("https://accounts.google.com/SignUp");
 		driver.findElement(By.xpath(".//*[@id='wrapper']/div[2]/div/div[1]/p/a")).click();
@@ -19,6 +19,9 @@ public class Windowortabswitch {
 		String parentid=itr1.next();
 		String childid=itr1.next();
 		driver.switchTo().window(childid);
+		System.out.println(driver.getTitle());
+		Thread.sleep(5000L);
+		driver.switchTo().window(parentid);
 		System.out.println(driver.getTitle());
 		
 	}

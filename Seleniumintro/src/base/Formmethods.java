@@ -20,7 +20,7 @@ public class Formmethods {
 		System.out.println(driver.findElement(By.xpath(".//*[@id='top_content']/div[2]/div[2]/div[2]/div[1]/div[7]/span/span[4]/a")).isDisplayed());
 		
 		
-//		driver.close();
+		driver.close();
 	}
 
 }

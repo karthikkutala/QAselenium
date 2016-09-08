@@ -12,14 +12,12 @@ public class radiobuttons {
 		driver.findElement(By.xpath("//input[@value='Cheese']")).click();
 		int count=driver.findElements(By.xpath("//input[@name='group1']")).size();
 		for(int i=0;i<count;i++){
-			
 			String text=driver.findElements(By.xpath("//input[@name='group1']")).get(i).getAttribute("value");
 			if(text.equals("Milk")){
 				driver.findElements(By.xpath("//input[@name='group1']")).get(i).click();
 				System.out.println(driver.findElements(By.xpath("//input[@name='group1']")).get(i).getAttribute("value"));
 			}
 		}
-		
 		System.out.println(count);
 	}
 

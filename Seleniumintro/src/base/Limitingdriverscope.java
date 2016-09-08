@@ -1,14 +1,21 @@
 package base;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 public class Limitingdriverscope {
 
 	public static void main(String[] args) {
-		WebDriver driver=new FirefoxDriver();
+		FirefoxBinary ffbinary= new FirefoxBinary(new File("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"));
+		FirefoxProfile ffprof=new FirefoxProfile();
+		WebDriver driver = new FirefoxDriver(ffbinary,ffprof);
+		//WebDriver driver=new FirefoxDriver();
 		driver.get("http://www.ebay.com/");
 		System.out.println("total number of links "+driver.findElements(By.tagName("a")).size());
 		WebElement footer = driver.findElement(By.xpath(".//*[@id='glbfooter']"));

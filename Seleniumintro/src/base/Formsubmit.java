@@ -9,9 +9,9 @@ import org.openqa.selenium.support.ui.Select;
 public class Formsubmit {
 
 	public static void main(String[] args) {
-//		WebDriver driver = new FirefoxDriver();
-		System.setProperty("webdriver.chrome.driver","E:\\QA\\workspace\\chromedriver.exe");	
-		WebDriver driver= new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
+//		System.setProperty("webdriver.chrome.driver","E:\\QA\\workspace\\chromedriver.exe");	
+//		WebDriver driver= new ChromeDriver();
 		driver.get("http://spicejet.com/");
 //		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
 //		driver.findElement(By.xpath("//a[@value='IXM']")).click();

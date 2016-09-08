@@ -14,6 +14,7 @@ public class Handleframes {
 		Thread.sleep(1500L);
 		driver.findElement(By.cssSelector("input[class='input_password']")).sendKeys("124");
 		driver.findElement(By.cssSelector(".lForm>tbody>tr>td>a")).click();
+		driver.switchTo().defaultContent();
 		
 	}
 
