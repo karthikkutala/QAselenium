@@ -4,13 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class mouseandkeyboardactions {
 
 	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver=new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver","E:\\QA\\jars\\chromedriver.exe");				// to work with chrome
+		WebDriver driver= new ChromeDriver();
+//		WebDriver driver=new FirefoxDriver();
 		driver.get("http://www.amazon.in/");
 		Actions abc = new Actions(driver);
 		WebElement ele1=driver.findElement(By.xpath(".//*[@id='nav-link-yourAccount']"));

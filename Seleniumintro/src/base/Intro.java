@@ -9,9 +9,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Intro {
 	public static void main(String[] args) {
-		WebDriver driver = new FirefoxDriver();
-//		System.setProperty("webdriver.chrome.driver","E:\\QA\\workspace\\chromedriver.exe");				// to work with chrome
-//		WebDriver driver= new ChromeDriver();
+//		WebDriver driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver","E:\\QA\\workspace\\chromedriver.exe");				// to work with chrome
+		WebDriver driver= new ChromeDriver();
 //		System.setProperty("webdriver.ie.driver","E:\\QA\\workspace\\IEDriverServer.exe");				
 //		WebDriver driver= new InternetExplorerDriver();
 //	Safari download and install plugin in mac

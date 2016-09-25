@@ -23,8 +23,16 @@ public class ExcelDriven {
 		System.out.println(value);
 		value = setcelldata(1,2,"yuva1");
 		System.out.println(value);
-		
-
+	/*	for(int i=0;;i++){
+			for(int j=0;;j++){
+				try{
+					value=getcelldata(j,i);
+					System.out.println(value);
+				}catch(Exception e){
+					
+				}
+			}
+		}*/
 	}
 
 	public static String getcelldata(int rownum,int cellnum) throws IOException{
@@ -33,8 +41,10 @@ public class ExcelDriven {
 		sheet= wb.getSheet("script");
 		row=sheet.getRow(rownum);
 		cell=row.getCell(cellnum);
+		wb.close();
 		return cell.getStringCellValue();
 	}
+	
 	public static String setcelldata(int rownum,int cellnum,String data) throws IOException{
 		files = new FileInputStream("E:\\QA\\workspace\\git\\Seleniumintro\\data.xlsx");
 		wb = new XSSFWorkbook(files);
@@ -46,6 +56,5 @@ public class ExcelDriven {
          wb.write(os);
 		return cell.getStringCellValue();
 	}
-	
 
 }
