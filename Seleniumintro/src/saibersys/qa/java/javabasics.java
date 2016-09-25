@@ -1,5 +1,9 @@
 package saibersys.qa.java;
 
+import saibersys.qa.java2.Employee;
+import saibersys.qa.java2.Mammal;
+import saibersys.qa.java2.Salary;
+
 public class javabasics {
 	
 	public static void main(String args[]){
@@ -18,6 +22,16 @@ public class javabasics {
 		finally{
 			System.out.println("try block has 1/0 so it will throw exception");
 		}
+		Mammal m = new Mammal();  //class from different class
+		m.eat();
+		
+		Salary s = new Salary("Mohd Mohtashim", "Ambehta, UP", 3, 3600.00);
+	    Employee e = new Salary("John Adams", "Boston, MA", 2, 2400.00);
+	    System.out.println("Call mailCheck using Salary reference --");
+	    s.mailCheck();
+	    System.out.println("\n Call mailCheck using Employee reference--");
+	    e.mailCheck();
+		
 	}
 	
 	public static void staticmethod(){
