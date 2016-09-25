@@ -19,6 +19,7 @@ public class javabasics {
 			System.out.println("try block has 1/0 so it will throw exception");
 		}
 	}
+	
 	public static void staticmethod(){
 		System.out.println("this is a static method");
 	}
