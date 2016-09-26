@@ -1,5 +1,8 @@
 package saibersys.qa.java;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import saibersys.qa.java2.Employee;
 import saibersys.qa.java2.Mammal;
 import saibersys.qa.java2.Salary;
@@ -31,7 +34,50 @@ public class javabasics {
 	    s.mailCheck();
 	    System.out.println("\n Call mailCheck using Employee reference--");
 	    e.mailCheck();
-		
+		//arrays
+	    double[] myList = {1.9, 2.9, 3.4, 3.5};
+	    double max = myList[0];
+	    for (int i = 1; i < myList.length; i++) {
+	        if (myList[i] > max) max = myList[i];
+	    }
+	    System.out.println("Max is " + max);
+	    
+	    //array list
+	    ArrayList<String> al = new ArrayList<String>();
+	    // add elements to the array list
+	    al.add("C");
+	    al.add("A");
+	    al.add("E");
+	    al.add("B");
+	    al.add("D");
+	    al.add("F");
+	    al.add(1, "A2");
+	    System.out.println("Size of al after additions: " + al.size());
+      // display the array list
+      System.out.println("Contents of al: " + al);
+      // Remove elements from the array list
+      al.remove("F");
+      al.remove(2);
+      System.out.println("Size of al after deletions: " + al.size());
+      System.out.println("Contents of al: " + al);
+      
+      //hashmap 
+      HashMap<Integer, String> newmap = new HashMap<Integer, String>();
+      
+      // populate hash map
+      newmap.put(1, "tutorials");
+      newmap.put(2, "point");
+      newmap.put(3, "is best");
+         
+      // get value of key 3
+      String val=(String)newmap.get(3);
+      System.out.println("Value for key 3 is: " + val);
+      
+      newmap.remove(2);
+      System.out.println("Values after remove: "+ newmap);
+      newmap.replace(3, "is better");
+      
+      
 	}
 	
 	public static void staticmethod(){
