@@ -25,10 +25,8 @@ public class TestPoPf {
 		//rd.submit().click();
 		rd.Home().click();
 		HomepagePO rh=new HomepagePO(driver);
-		rh.Search().sendKeys("rediff");
+		rh.Search().sendKeys("samsung");
 		rh.Submit().click();
-		
-		
 	}
 	
 	@Test
@@ -44,7 +42,7 @@ public class TestPoPf {
 		
 		rd.Home().click();
 		HomepagePF rh=new HomepagePF(driver1);
-		rh.Search().sendKeys("rediff");
+		rh.Search().sendKeys("apple");
 		rh.Submit().click();
 		
 		

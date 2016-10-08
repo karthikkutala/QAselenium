@@ -9,9 +9,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Intro {
 	public static void main(String[] args) {
-//		WebDriver driver = new FirefoxDriver();
-		System.setProperty("webdriver.chrome.driver","E:\\QA\\workspace\\chromedriver.exe");				// to work with chrome
-		WebDriver driver= new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
+//		System.setProperty("webdriver.chrome.driver","E:\\QA\\jars\\chromedriver.exe");				// to work with chrome
+//		WebDriver driver= new ChromeDriver();
 //		System.setProperty("webdriver.ie.driver","E:\\QA\\workspace\\IEDriverServer.exe");				
 //		WebDriver driver= new InternetExplorerDriver();
 //	Safari download and install plugin in mac
@@ -22,8 +22,8 @@ public class Intro {
 	//	System.out.println(driver.getTitle());   		// to get title of url
 	//	System.out.println(driver.getPageSource());  	//to get page source
 	//	System.out.println(driver.getCurrentUrl());		// to get current url
-		driver.findElement(By.xpath(".//*[@id='tsf']/div[2]/div[3]/center/input[1]")).click();
-		
+	//	driver.findElement(By.xpath(".//*[@id='tsf']/div[2]/div[3]/center/input[1]")).click();
+		driver.findElement(By.linkText("Gmail")).click();
 		
 		
 /*		try {

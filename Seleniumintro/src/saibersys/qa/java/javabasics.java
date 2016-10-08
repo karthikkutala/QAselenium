@@ -2,6 +2,8 @@ package saibersys.qa.java;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 
 import saibersys.qa.java2.Employee;
 import saibersys.qa.java2.Mammal;
@@ -77,6 +79,24 @@ public class javabasics {
       System.out.println("Values after remove: "+ newmap);
       newmap.replace(3, "is better");
       
+      
+      //hashset
+      HashSet<String> hs = new HashSet<String>();
+      
+      // add elements to the hash set
+      hs.add("B");
+      hs.add("A");
+      hs.add("D");
+      hs.add("E");
+      hs.add("C");
+      hs.add("F");
+      System.out.println("hashsey values" +hs);
+      
+      //Iterator
+      Iterator<String> itr=hs.iterator();  
+      while(itr.hasNext()){  
+       System.out.println(itr.next());  
+      }  
       
 	}
 	

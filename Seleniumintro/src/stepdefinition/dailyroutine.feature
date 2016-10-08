@@ -1,25 +1,30 @@
 Feature: Life of king
 
-In order to get good 
-As a IT guy
-I want to keep my boss 
+In order to go office
+As a working guy
+I want to wish people
 
 @tester
-Scenario: I am a kingman
+Scenario Outline:I am a kingman
 
 Given I work in Latenights
 When I meet watchmen
 Then I Greeted him
 
 Given I work in Mornings
-When I meet NewspaperBoy
+When I meet NewspaperssBoy
 Then I skipGreeting him
 
+Given I am on e-buyer homepage
+When I click the search button
+Then Search result should display different devices
 
-Given: I am on e-buyer homepage
+Given we work in "<weekday>"
+When we meet "<guy>"
+Then I skipGreeting him
 
-And: I enter Lenovo into search field
+Examples:
+ |weekday |   guy     |
+ |tenpm   | watchmen  |
+ |ninepm  |  cabdriver|
 
-When: I click the search button
-
-Then: Search result should display different devices
