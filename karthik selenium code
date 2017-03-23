@@ -1,0 +1,280 @@
+package pavndemo1;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class pavandemoweb {
+
+    public static void main(String[] args) throws InterruptedException {
+        // TODO Auto-generated method stub
+        
+       // System.setProperty("webdriver.gecko.driver", "E:\\transfered Drive F Study Volume\\selinium training and practice\\selinium by Udemi course\\geckodriver.exe");
+        WebDriver driver=new FirefoxDriver();
+        driver.get("http://www.uk.webuy.com");
+        driver.findElement(By.xpath("html/body/div[5]/div[1]/div[4]/div[4]/a[2]/div/span")).click();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("html/body/div[5]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/a[1]")).click();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("html/body/div[4]/div[1]/div[3]/div[2]/form/table/tbody/tr[1]/td[1]/div/select")).click();
+        WebElement r= driver.findElement(By.xpath("html/body/div[4]/div[1]/div[3]/div[2]/form/table/tbody/tr[1]/td[1]/div/select"));
+        Select d=new Select(r);
+        // driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        
+         d.getOptions();
+         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+         d.selectByIndex(8);
+        //driver.findElement(By.linkText("3")).click();
+
+    }
+*************************************************************************88888888
+package pavndemo1;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class gmail {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1");
+		driver.findElement(By.xpath(".//*[@id='Email']")).sendKeys("pavansama87");
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.findElement(By.xpath(".//*[@id='next']")).click();
+		driver.findElement(By.xpath("/html/body/div/div[2]/div[2]/div[1]/form/div[2]/div/div[2]/div/div/input[2]")).sendKeys("pavan12333");
+		driver.findElement(By.xpath(".//*[@id='signIn']")).click();
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	    
+		
+	}
+
+}
+********************************************************************************88
+package Demo;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.JavascriptExecutor;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+
+public class TestScroll {
+
+public static void main(String[] args) {
+
+// Start browser
+
+WebDriver driver=new FirefoxDriver();
+
+
+
+// Maximize browser
+
+driver.manage().window().maximize();
+
+
+
+// Pass application URL
+
+driver.get("http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_examples.html");
+
+
+
+// Create instance of Javascript executor
+
+JavascriptExecutor je = (JavascriptExecutor) driver;
+
+
+
+//Identify the WebElement which will appear after scrolling down
+
+WebElement element = driver.findElement(By.xpath(".//*[@id='mCSB_3_container']/p[3]"));
+
+
+
+// now execute query which actually will scroll until that element is not appeared on page.
+
+je.executeScript("arguments[0].scrollIntoView(true);",element);
+
+
+
+// Extract the text and verify
+
+System.out.println(element.getText());
+
+}
+
+}
+
+package practiceTestCases;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import org.openqa.selenium.interactions.Action;
+
+import org.openqa.selenium.interactions.Actions;
+
+public class DragAndDrop {
+
+public static void main(String[] args) throws InterruptedException {
+
+WebDriver driver = new FirefoxDriver();
+
+String URL = "http://www.dhtmlx.com/docs/products/dhtmlxTree/index.shtml";
+
+driver.get(URL);
+
+// It is always advisable to Maximize the window before performing DragNDrop action
+
+driver.manage().window().maximize();
+
+driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+
+WebElement From = driver.findElement(By.xpath(".//*[@id='treebox1']/div/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[1]/td[4]/span"));
+
+WebElement To = driver.findElement(By.xpath(".//*[@id='treebox2']/div/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[1]/td[4]/span"));
+
+Actions builder = new Actions(driver);
+
+Action dragAndDrop = builder.clickAndHold(From)
+
+.moveToElement(To)
+
+.release(To)
+
+.build();
+
+dragAndDrop.perform();
+
+}
+
+}
+****************************************************************************888
+
+package practiceTestCases;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class rightclick {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.google.com/");
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		WebElement gmail=driver.findElement(By.xpath(".//*[@id='gbw']/div/div/div[1]/div[1]/a"));
+		Actions builder=new Actions(driver);
+		builder.contextClick(gmail).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).perform();
+
+
+	}
+
+}
+*********************************************************************88
+package pavndemo1;
+import java.io.File;
+ 
+import java.io.IOException;
+ 
+import org.apache.commons.io.FileUtils;
+ 
+import org.openqa.selenium.OutputType;
+ 
+import org.openqa.selenium.TakesScreenshot;
+ 
+import org.openqa.selenium.WebDriver;
+ 
+import org.openqa.selenium.firefox.FirefoxDriver;
+ 
+import org.testng.annotations.Test;
+ 
+public class ScreenshootGoogle {
+ 
+ @Test
+ public void TestJavaS1()
+{
+// Open Firefox
+ WebDriver driver=new FirefoxDriver();
+ 
+// Maximize the window
+driver.manage().window().maximize();
+ 
+// Pass the url
+driver.get("http://www.google.com");
+ 
+// Take screenshot and store as a file format
+File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+try {
+ // now copy the  screenshot to desired location using copyFile //method
+FileUtils.copyFile(src, new File("C:/selenium/error.png"));
+}
+ 
+catch (IOException e)
+ {
+  System.out.println(e.getMessage());
+ 
+ }
+}
+}
+package pavndemo1;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class SyncInSelenium {
+ 
+ public static void main(String[] args) {
+  
+  // Creating the Driver object
+  WebDriver selenium ;
+  selenium = new FirefoxDriver();
+  //Using Implicit wait for 20 seconds,which is applicable to all the controls in application
+  //selenium.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+  //Opening the application page 
+  selenium.navigate().to("http://www.uftHelp.com");
+     //Using Explicit wait , Expected Condition is search box to be visible
+  WebDriverWait wait = new WebDriverWait(selenium, 10);
+  wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("gsc-i-id1")));
+  //Fill the value into the search
+  selenium.findElement(By.id("gsc-i-id1")).sendKeys("Explicit Wait");
+  //Destroying the Application instance
+  //selenium.quit(); 
+  
+ }
+
+}
